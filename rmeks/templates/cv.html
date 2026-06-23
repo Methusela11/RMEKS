@@ -1,31 +1,50 @@
 {% load static %}
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Engineer Methusela</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Engineer Methusela</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="{% static 'assets/img/methusela.png' %}" class="rmeksimg" rel="icon">
-  <link href="{% static 'assets/img/methusela.png' %}" class="rmeksimg" rel="apple-touch-icon">
+    <!-- Favicons -->
+    <link
+      href="{% static 'assets/img/methusela.png' %}"
+      class="rmeksimg"
+      rel="icon"
+    />
+    <link
+      href="{% static 'assets/img/methusela.png' %}"
+      class="rmeksimg"
+      rel="apple-touch-icon"
+    />
 
     <!-- Vendor CSS Files -->
-  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+    <link
+      href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}"
+      rel="stylesheet"
+    />
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet" />
+    <link
+      href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}"
+      rel="stylesheet"
+    />
 
-  <!-- Main CSS File -->
-  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="{% static 'assets/css/main.css' %}" rel="stylesheet" />
 
-<style>
-    .btn {
+    <style>
+      .btn {
         display: inline-block;
         margin-top: 25px;
         background: #37daff;
@@ -35,321 +54,510 @@
         font-size: 15px;
         text-decoration: none;
         border: 2px solid #142647;
-    }
-    .btn:hover {
+      }
+      .btn:hover {
         background-color: #234b77;
         border-color: #23236a;
         color: #fff;
-    }
-</style>
+      }
+    </style>
+  </head>
 
-</head>
+  <body class="index-page" style="font-family: arial, sans-serif">
+    <header id="header" class="header dark-background d-flex flex-column">
+      <i class="header-toggle d-xl-none bi bi-list"></i>
 
-<body class="index-page"  style="font-family: arial, sans-serif;">
-
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <div class="profile-img">
-      <img src="{% static 'assets/img/methusela.png' %}" alt="" class="img-fluid rounded-circle">
-    </div>
-
-    <a href="{% url 'homepage' %}" class="logo d-flex align-items-center justify-content-center">
-      <h1 class="sitename">
-          Methusela Enoch <i class="bi bi-patch-check-fill verified-icon" style="color: #0dcaf0; font-size: 14px;"></i>
-      </h1>
-    </a>
-
-
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="{% url 'homepage' %}" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="{% url 'about' %}"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li class="dropdown"><a href="{% url 'services' %}"><i class="bi bi-menu-button navicon"></i> <span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-
-          <ul>
-            <li><a href="{% url 'services' %}">Website Development</a></li>
-            <li><a href="{% url 'services' %}">Application Development</a></li>
-            <li><a href="{% url 'services' %}">Database Management</a></li>
-            <li><a href="{% url 'services' %}">System Development</a></li>
-            <li><a href="{% url 'services' %}">Cybersecurity</a></li>
-            <li><a href="{% url 'services' %}">Network Installation</a></li>
-          </ul>
-        </li>
-        <li><a href="{% url 'contact' %}"><i class="bi bi-envelope navicon"></i> Contact</a></li>
-
-      </ul>
-      <div class="social-links text-center">
-          <a href="https://x.com/EngineerEnochs" target="_blank" class="twitter"><i class="bi bi-twitter-x"></i></a>
-          <a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="https://ke.linkedin.com/in/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          <a href="https://ke.instagram.com/in/" target="_blank" class="linkedin"><i class="bi bi-instagram"></i></a>
-          <a href="https://wa.me/254780667707" target="_blank" class="linkedin"><i class="bi bi-whatsapp"></i></a>
+      <div class="profile-img">
+        <img
+          src="{% static 'assets/img/methusela.png' %}"
+          alt=""
+          class="img-fluid rounded-circle"
+        />
       </div>
-    </nav>
 
-  </header>
+      <a
+        href="{% url 'homepage' %}"
+        class="logo d-flex align-items-center justify-content-center"
+      >
+        <h1 class="sitename">
+          Methusela Enoch
+          <i
+            class="bi bi-patch-check-fill verified-icon"
+            style="color: #0dcaf0; font-size: 14px"
+          ></i>
+        </h1>
+      </a>
 
-  <main class="main">
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li>
+            <a href="{% url 'homepage' %}" class="active"
+              ><i class="bi bi-house navicon"></i>Home</a
+            >
+          </li>
+          <li>
+            <a href="{% url 'about' %}"
+              ><i class="bi bi-person navicon"></i> About</a
+            >
+          </li>
+          <li>
+            <a href="#resume"
+              ><i class="bi bi-file-earmark-text navicon"></i> Resume</a
+            >
+          </li>
+          <li class="dropdown">
+            <a href="{% url 'services' %}"
+              ><i class="bi bi-menu-button navicon"></i> <span>Services</span>
+              <i class="bi bi-chevron-down toggle-dropdown"></i
+            ></a>
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
+            <ul>
+              <li><a href="{% url 'services' %}">Website Development</a></li>
+              <li>
+                <a href="{% url 'services' %}">Application Development</a>
+              </li>
+              <li><a href="{% url 'services' %}">Database Management</a></li>
+              <li><a href="{% url 'services' %}">System Development</a></li>
+              <li><a href="{% url 'services' %}">Cybersecurity</a></li>
+              <li><a href="{% url 'services' %}">Network Installation</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="{% url 'contact' %}"
+              ><i class="bi bi-envelope navicon"></i> Contact</a
+            >
+          </li>
+        </ul>
+        <div class="social-links text-center">
+          <a href="https://x.com/EngineerEnochs" target="_blank" class="twitter"
+            ><i class="bi bi-twitter-x"></i
+          ></a>
+          <a href="https://www.facebook.com/" target="_blank" class="facebook"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a href="https://ke.linkedin.com/in/" target="_blank" class="linkedin"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+          <a
+            href="https://ke.instagram.com/in/"
+            target="_blank"
+            class="linkedin"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a href="https://wa.me/254780667707" target="_blank" class="linkedin"
+            ><i class="bi bi-whatsapp"></i
+          ></a>
+        </div>
+      </nav>
+    </header>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up"  style="text-align: center;">
-        <h1 style="font-weight: bold;">CURRICULUM VITAE</h1>
-        <p>METHUSELA ENOCH</p>
-        <p>methuselahreynarld@gmail.com</p>
-        <p>+254110440006 / +254780667707</p>
-        <p>Kilifi, Kenya</p>
-      </div><!-- End Section Title -->
+    <main class="main">
+      <!-- Resume Section -->
+      <section id="resume" class="resume section">
+        <!-- Section Title -->
+        <div
+          class="container section-title"
+          data-aos="fade-up"
+          style="text-align: center"
+        >
+          <h1 style="font-weight: bold">CURRICULUM VITAE</h1>
+          <p>METHUSELA ENOCH</p>
+          <p>methuselahreynarld@gmail.com</p>
+          <p>+254110440006 / +254780667707</p>
+          <p>Kilifi, Kenya</p>
+        </div>
+        <!-- End Section Title -->
 
-      <div class="container">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="resume-title">Personal Information</h3>
 
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Personal Information</h3>
-
-            <div class="resume-item pb-0">
-              <h4>Engineer Methusela</h4>
-              <p><strong>GITHUB: </strong>https://github.com/Methusela11</p>
-              <p><strong>GENDER: </strong>Male</p>
-              <p><strong>DOB: </strong>01 November 2002</p>
-              <p><strong>NATIONALITY: </strong>Kenyan</p>
-              <p><strong>LANGUAGES: </strong>English, Swahili</p>
+              <div class="resume-item pb-0">
+                <h4>Engineer Methusela</h4>
+                <p><strong>GITHUB: </strong>https://github.com/Methusela11</p>
+                <p><strong>GENDER: </strong>Male</p>
+                <p><strong>DOB: </strong>01 November 2002</p>
+                <p><strong>NATIONALITY: </strong>Kenyan</p>
+                <p><strong>LANGUAGES: </strong>English, Swahili</p>
                 <p><strong>MARITAL STATUS: </strong>Single</p>
-            </div><!-- End Resume Item -->
+              </div>
+              <!-- End Resume Item -->
 
-            <h3 class="resume-title">Summary</h3>
+              <h3 class="resume-title">Summary</h3>
 
-            <div class="resume-item pb-0">
-              <h4>Engineer Methusela</h4>
-              <p>
+              <div class="resume-item pb-0">
+                <h4>Engineer Methusela</h4>
+                <p>
                   <em>
-                      Passionate and detail-oriented Software Engineer with hands-on experience in designing, developing and deploying modern web
-                      and mobile applications. Skilled in building scalable, user-friendly digital solutions using technologies such as React Native,
-                      Django, Supabase, C#, Java and Kotlin. Dedicated to continuous learning, clean code and solving real-world problems through technology.
+                    Passionate and detail-oriented Software Engineer with
+                    hands-on experience in designing, developing and deploying
+                    modern web and mobile applications. Skilled in building
+                    scalable, user-friendly digital solutions using technologies
+                    such as React Native, Django, Supabase, C#, Java and Kotlin.
+                    Dedicated to continuous learning, clean code and solving
+                    real-world problems through technology.
                   </em>
-              </p>
-            </div><!-- End Resume Item -->
+                </p>
+              </div>
+              <!-- End Resume Item -->
 
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
+              <h3 class="resume-title">Education</h3>
+              <div class="resume-item">
+                <h4>Bachelor of Science in Software Engineering</h4>
+                <h5>2022 - Present</h5>
+                <p><em>Kisii University, Kisii</em></p>
+                <p>
+                  Currently, pursuing Barchelor's Degree in Software Engineering
+                  where I am equipped with hands-on training and best
+                  programming skills.
+                </p>
 
-              <h4>Bachelor of Science in Software Engineering</h4>
-              <h5>2022 - Present</h5>
-              <p><em>Kisii University, Kisii</em></p>
-              <p>Currently, pursuing Barchelor's Degree in Software Engineering where I am equipped with hands-on training and best programming skills.</p>
-
-              <h4>Self-Taught Courses</h4>
-              <h5>2024 - 2025</h5>
-              <p><em>Online Courses</em></p>
-              <ul>
-                <li>Research Ethics, Rising Scholars Project INASP (2025)</li>
-                <li>Critical Infrastructure Protection, OPSWAT Academy (2025)</li>
-                <li>Web development, Emobillis (2025)</li>
-                <li>Python Programming Essentials, Jenga Learning (2025)</li>
-                <li>Cancer Image Detection with Pytorch, IBM Developer Skills Network (2025)</li>
-                <li>Excel for Data Analyst, Jenga Learning (2024)</li>
+                <h4>Self-Taught Courses</h4>
+                <h5>2024 - 2025</h5>
+                <p><em>Online Courses</em></p>
+                <ul>
+                  <li>Research Ethics, Rising Scholars Project INASP (2025)</li>
+                  <li>
+                    Critical Infrastructure Protection, OPSWAT Academy (2025)
+                  </li>
+                  <li>Web development, Emobillis (2025)</li>
+                  <li>Python Programming Essentials, Jenga Learning (2025)</li>
+                  <li>
+                    Cancer Image Detection with Pytorch, IBM Developer Skills
+                    Network (2025)
+                  </li>
+                  <li>Excel for Data Analyst, Jenga Learning (2024)</li>
                   <li>Data structures and Algorithms, freeCodeCamp (2024)</li>
-              </ul>
+                </ul>
 
-              <h4>Kenya Certificate of Secondary Education</h4>
-              <h5>2018 - 2021</h5>
-              <p><em>Malindi High School, Malindi</em></p>
-              <p>I was awarded my Kenya Certificate of Secondary Education.</p>
-            </div><!-- End Resume Item -->
+                <h4>Kenya Certificate of Secondary Education</h4>
+                <h5>2018 - 2021</h5>
+                <p><em>Malindi High School, Malindi</em></p>
+                <p>
+                  I was awarded my Kenya Certificate of Secondary Education.
+                </p>
+              </div>
+              <!-- End Resume Item -->
 
-            <h3 class="resume-title">Certifications & Achievements</h3>
-            <div class="resume-item">
-              <h4>Achievements</h4>
-              <ul>
-                  <li>Founder and CEO of RMEKS Software Company – 2025.</li>
-                  <li>I won the Kilifi Tech Innovation Challenge, awarded for developing local Government Request Automation Systems – 2025.</li>
-                  <li>Participation in a 4-person developer team to design and launch ConnectSphere within 6 months – 2025.</li>
-                  <li>Recognized as Top Developer in the Kilifi Tech Innovation Challenge – 2025.</li>
-              </ul>
-              <h4>Certifications</h4>
-              <ul>
+              <h3 class="resume-title">Certifications & Achievements</h3>
+              <div class="resume-item">
+                <h4>Achievements</h4>
+                <ul>
                   <li>
-                      I participated in a Cancer Image Detection with Pytorch Cognitive Class powered by IBM Developer Skills Network – 2025.
-                      <a href="{% static 'certificates/ibm.pdf' %}" target="_blank">View Certificate.</a>
+                    I won the Kilifi Tech Innovation Challenge, awarded for
+                    developing local Government Request Automation Systems –
+                    2025.
                   </li>
                   <li>
-                      I participated in the first Western Region Research and Innovation Consortium(WRRIC) hackathon at Kisii University. I presented my project on a Mental Health Chatbot, EduWell.
-                      <a href="" target="_blank">View Certificate.</a>
+                    Participation in a 4-person developer team to design and
+                    launch ConnectSphere within 6 months – 2025.
                   </li>
                   <li>
-                      I participated in an Introduction to Research Ethics offered by the Rising Scholars Project, which is coordinated by INASP – 2025.
-                      <a href="{% static 'certificates/research.pdf' %}" target="_blank">View Certificate.</a>
+                    Recognized as Top Developer in the Kilifi Tech Innovation
+                    Challenge – 2025.
                   </li>
-                  <li>I participated in an Introduction to Critical Infrastructure Protection offered by OPSWAT Academy – 2025.
-                      <a href="{% static 'certificates/cip.png' %}" target="_blank">View Certificate.</a>
+                </ul>
+                <h4>Certifications</h4>
+                <ul>
+                  <li>
+                    I participated in a Cancer Image Detection with Pytorch
+                    Cognitive Class powered by IBM Developer Skills Network –
+                    2025.
+                    <a
+                      href="{% static 'certificates/ibm.pdf' %}"
+                      target="_blank"
+                      >View Certificate.</a
+                    >
                   </li>
-              </ul>
-            </div><!-- End Resume Item -->
+                  <li>
+                    I participated in the first Western Region Research and
+                    Innovation Consortium(WRRIC) hackathon at Kisii University.
+                    I presented my project on a Mental Health Chatbot, EduWell.
+                    <a href="" target="_blank">View Certificate.</a>
+                  </li>
+                  <li>
+                    I participated in an Introduction to Research Ethics offered
+                    by the Rising Scholars Project, which is coordinated by
+                    INASP – 2025.
+                    <a
+                      href="{% static 'certificates/research.pdf' %}"
+                      target="_blank"
+                      >View Certificate.</a
+                    >
+                  </li>
+                  <li>
+                    I participated in an Introduction to Critical Infrastructure
+                    Protection offered by OPSWAT Academy – 2025.
+                    <a
+                      href="{% static 'certificates/cip.png' %}"
+                      target="_blank"
+                      >View Certificate.</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- End Resume Item -->
 
-            <h3 class="resume-title">Personal Strength</h3>
-            <div class="resume-item">
-              <h4>Personal Strength</h4>
-              <ul>
+              <h3 class="resume-title">Personal Strength</h3>
+              <div class="resume-item">
+                <h4>Personal Strength</h4>
+                <ul>
                   <li>Self-motivated with flexible attitude to work.</li>
                   <li>Ability to work under minimum / no supervision.</li>
-              </ul>
-            </div><!-- End Resume Item -->
+                </ul>
+              </div>
+              <!-- End Resume Item -->
 
-            <h3 class="resume-title">Skills</h3>
-            <div class="resume-item">
-              <h4>Skills</h4>
-              <ul>
+              <h3 class="resume-title">Skills</h3>
+              <div class="resume-item">
+                <h4>Skills</h4>
+                <ul>
                   <li>Programming.</li>
                   <li>Teamwork and Collaboration.</li>
                   <li>Time management and self-learning.</li>
                   <li>Analytical and problem-solving.</li>
-              </ul>
-            </div><!-- End Resume Item -->
+                </ul>
+              </div>
+              <!-- End Resume Item -->
 
-            <h3 class="resume-title">Hobbies and Interests</h3>
-            <div class="resume-item">
-              <h4>Hobbies and Interests</h4>
-              <ul>
+              <h3 class="resume-title">Hobbies and Interests</h3>
+              <div class="resume-item">
+                <h4>Hobbies and Interests</h4>
+                <ul>
                   <li>Coding.</li>
                   <li>Volunteering.</li>
                   <li>Gaming.</li>
-              </ul>
-            </div><!-- End Resume Item -->
+                </ul>
+              </div>
+              <!-- End Resume Item -->
+            </div>
 
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <h3 class="resume-title">Professional Experience</h3>
+              <div class="resume-item">
+                <h4>OCT 2025 – JAN 2026</h4>
+                <h4 style="color: black">Fullstack Developer</h4>
+                <p><em>RMEKS SOFTWARE COMPANY</em></p>
+                <ul>
+                  <li>Web designing, development and deployment.</li>
+                  <li>Application development and deployment.</li>
+                  <li>System development and deployment.</li>
+                  <li>Database management.</li>
+                  <li>Network installation.</li>
+                  <li>Cybersecurity.</li>
+                </ul>
+              </div>
+              <!-- End Resume Item -->
+
+              <div class="resume-item">
+                <h4>AUG 2025 – OCT 2025</h4>
+                <h4 style="color: black">Web Developer</h4>
+                <p><em>KENTAINERSS COMPANY – NAIROBI, KENYA</em></p>
+                <ul>
+                  <li>
+                    Developed the Kentainerss website, an E commerce website for
+                    various products for the Kentainerss company like water
+                    tanks and related accessories.
+                  </li>
+                  <li>
+                    Developed and integrated product management, shopping cart
+                    and checkout functionalities.
+                  </li>
+                  <li>
+                    Implemented secure payment gateway integrations and order
+                    management workflows.
+                  </li>
+                  <li>
+                    Managed database design and backend logic to support
+                    scalable e-commerce operations.
+                  </li>
+                  <li>
+                    Provided ongoing maintenance, updates and technical support
+                    for the live platform.
+                  </li>
+                </ul>
+              </div>
+              <!-- End Resume Item -->
+
+              <div class="resume-item">
+                <h4>MAY 2025 – AUG 2025</h4>
+                <h4 style="color: black">
+                  Assistant ICT Officer and Web Developer
+                </h4>
+                <p>
+                  <em
+                    >COUNTY GOVERNMENT OF KILIFI, DEPARTMENT OF WATER,
+                    ENVIRONMENT, FORESTRY, NATURAL RESOURCES AND SOLID WASTE
+                    MANAGEMENT - KILIFI, KENYA</em
+                  >
+                </p>
+                <ul>
+                  <li>
+                    Automated the Environmental permit request process for the
+                    County Government of Kilifi by building a Permit Request
+                    System website.
+                  </li>
+                  <li>
+                    Automated Water boozer request process for the County
+                    Government of Kilifi by building a Water boozer request
+                    system website.
+                  </li>
+                  <li>
+                    Assisted in the development, deployment and maintenance of
+                    websites and internal systems.
+                  </li>
+                  <li>
+                    Provided technical support and maintenance for computer
+                    systems, networks, printers and other ICT equipment.
+                  </li>
+                  <li>
+                    Installed, configured and maintained hardware, software and
+                    operating systems across the organization.
+                  </li>
+                  <li>
+                    Implemented data security, backups and access controls to
+                    protect organizational information.
+                  </li>
+                  <li>
+                    Managed and monitored network infrastructure, ensuring
+                    secure and reliable connectivity.
+                  </li>
+                  <li>
+                    Supported users with troubleshooting, training and
+                    day-to-day ICT assistance.
+                  </li>
+                </ul>
+              </div>
+              <!-- End Resume Item -->
+
+              <div class="resume-item">
+                <h4>MAY 2025 – SEPT 2025</h4>
+                <h4 style="color: black">Web Developer and Networking</h4>
+                <p>
+                  <em
+                    >COUNTY GOVERNMENT OF KILIFI, DEPARTMENT OF TRADE - KILIFI,
+                    KENYA</em
+                  >
+                </p>
+                <ul>
+                  <li>
+                    Automated Business permit request process for the County
+                    Government of Kilifi by building a Business Permit Request
+                    System website.
+                  </li>
+                  <li>
+                    Collaborated with department officials to gather
+                    requirements and optimize workflows based on operational
+                    needs.
+                  </li>
+                  <li>
+                    Ensured data security and system reliability, including
+                    database management and regular backups.
+                  </li>
+                  <li>
+                    Offered technical support and system training to staff to
+                    ensure smooth adoption of the platform.
+                  </li>
+                  <br />
+                  <li>
+                    Provided user support for network-related issues and
+                    resolved connectivity problems.
+                  </li>
+                  <li>
+                    Configured and managed network devices including routers,
+                    switches, access points and firewalls.
+                  </li>
+                  <li>
+                    Designed, installed and maintained LAN and WAN network
+                    infrastructure to ensure reliable connectivity across the
+                    organization.
+                  </li>
+                  <li>
+                    Implemented and monitored network security measures
+                    including access controls and intrusion prevention.
+                  </li>
+                  <li>
+                    Performed network troubleshooting and performance
+                    optimization to minimize downtime and improve efficiency.
+                  </li>
+                </ul>
+              </div>
+              <!-- End Resume Item -->
+
+              <h3 class="resume-title">References</h3>
+              <div class="resume-item">
+                <h4>EMMA TATU</h4>
+                <p>
+                  ICT Officer, Department of Water, Environment, Forestry,
+                  Natural Resources & Solid Waste Management<br />County
+                  Govenment of Kilifi
+                </p>
+                <p>📞 +254 734 751363</p>
+                <p>Kilifi, Kenya</p>
+
+                <h4>Raymond Amani</h4>
+                <p>Accountant<br />Mombasa Cement Limited Company</p>
+                <p>📞 +254758333975</p>
+                <p>Kilifi, Kenya</p>
+              </div>
+            </div>
           </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>OCT 2025 – PRESENT</h4>
-              <h4 style="color: black">Founder and CEO</h4>
-              <p><em>RMEKS SOFTWARE COMPANY, NAIROBI KENYA</em></p>
-              <ul>
-                <li>Web designing, development and deployment.</li>
-                <li>Application development and deployment.</li>
-                <li>System development and deployment.</li>
-                <li>Database management.</li>
-                <li>Network installation.</li>
-                <li>Cybersecurity.</li>
-              </ul>
-            </div><!-- End Resume Item -->
-
-            <div class="resume-item">
-              <h4>AUG 2025 – OCT 2025</h4>
-              <h4 style="color: black">Web Developer</h4>
-              <p><em>KENTAINERSS COMPANY – NAIROBI, KENYA</em></p>
-              <ul>
-                <li>Developed the Kentainerss website, an E commerce website for various products for the Kentainerss company like water tanks and related accessories.</li>
-                <li>Developed and integrated product management, shopping cart and checkout functionalities.</li>
-                <li>Implemented secure payment gateway integrations and order management workflows.</li>
-                <li>Managed database design and backend logic to support scalable e-commerce operations.</li>
-                <li>Provided ongoing maintenance, updates and technical support for the live platform.</li>
-              </ul>
-            </div><!-- End Resume Item -->
-
-            <div class="resume-item">
-              <h4>MAY 2025 – AUG 2025</h4>
-              <h4 style="color: black">Assistant ICT Officer and Web Developer</h4>
-              <p><em>COUNTY GOVERNMENT OF KILIFI, DEPARTMENT OF WATER, ENVIRONMENT, FORESTRY, NATURAL RESOURCES AND SOLID WASTE MANAGEMENT  - KILIFI, KENYA</em></p>
-              <ul>
-                <li>Automated the Environmental permit request process for the County Government of Kilifi by building a Permit Request System website.</li>
-                <li>Automated Water boozer request process for the County Government of Kilifi by building a Water boozer request system website.</li>
-                <li>Assisted in the development, deployment and maintenance of websites and internal systems.</li>
-                <li>Provided technical support and maintenance for computer systems, networks, printers and other ICT equipment.</li>
-                <li>Installed, configured and maintained hardware, software and operating systems across the organization.</li>
-                <li>Implemented data security, backups and access controls to protect organizational information.</li>
-                <li>Managed and monitored network infrastructure, ensuring secure and reliable connectivity.</li>
-                <li>Supported users with troubleshooting, training and day-to-day ICT assistance.</li>
-              </ul>
-            </div><!-- End Resume Item -->
-
-            <div class="resume-item">
-              <h4>MAY 2025 – SEPT 2025</h4>
-              <h4 style="color: black">Web Developer and Networking</h4>
-              <p><em>COUNTY GOVERNMENT OF KILIFI, DEPARTMENT OF TRADE  - KILIFI, KENYA</em></p>
-              <ul>
-                <li>Automated Business permit request process for the County Government of Kilifi by building a Business Permit Request System website.</li>
-                <li>Collaborated with department officials to gather requirements and optimize workflows based on operational needs.</li>
-                <li>Ensured data security and system reliability, including database management and regular backups.</li>
-                <li>Offered technical support and system training to staff to ensure smooth adoption of the platform.</li>
-                  <br>
-                <li>Provided user support for network-related issues and resolved connectivity problems.</li>
-                <li>Configured and managed network devices including routers, switches, access points and firewalls.</li>
-                <li>Designed, installed and maintained LAN and WAN network infrastructure to ensure reliable connectivity across the organization.</li>
-                <li>Implemented and monitored network security measures including access controls and intrusion prevention.</li>
-                <li>Performed network troubleshooting and performance optimization to minimize downtime and improve efficiency.</li>
-              </ul>
-            </div><!-- End Resume Item -->
-
-
-            <h3 class="resume-title">References</h3>
-            <div class="resume-item">
-              <h4>EMMA TATU</h4>
-              <p>ICT Officer, Department of Water, Environment, Forestry, Natural Resources & Solid Waste Management<br>County Govenment of Kilifi</p>
-                <p> 📞 +254 734 751363</p>
-                <p> Kilifi, Kenya</p>
-
-              <h4>Raymond Amani</h4>
-              <p>Accountant<br>Mombasa Cement Limited Company</p>
-                <p> 📞 +254758333975</p>
-                <p> Kilifi, Kenya</p>
-
-
+          <div class="cta" style="margin: 40px 0; text-align: left">
+            <a
+              href="{% url 'contact' %}"
+              class="btn primary"
+              style="margin-right: 10px"
+              >Get in touch?</a
+            >
+            <a
+              href="{% static 'cv/vitae-vitae.pdf' %}"
+              target="_blank"
+              class="btn outline"
+              >Get Resume</a
+            >
           </div>
-
         </div>
+      </section>
+      <!-- /Resume Section -->
+    </main>
 
-      </div>
-      <div class="cta" style="margin: 40px 0; text-align: left;">
-        <a href="{% url 'contact' %}" class="btn primary" style="margin-right: 10px;">Get in touch?</a>
-        <a href="{% static 'cv/vitae-vitae.pdf' %}" target="_blank" class="btn outline">Get Resume</a>
-      </div>
-
-      </div>
-
-    </section><!-- /Resume Section -->
-
-  </main>
-
-  <footer id="footer" class="footer position-relative light-background">
-
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>©
+    <footer id="footer" class="footer position-relative light-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            ©
             <span>Copyright</span>
             <strong class="px-1 sitename">
-                <a href="https://portifolio-v4h3.onrender.com" target="_blank"><strong style="color: black">Methusela Enoch</strong></a>
+              <a href="https://portifolio-v4h3.onrender.com" target="_blank"
+                ><strong style="color: black">Methusela Enoch</strong></a
+              >
             </strong>
-            <span>All Rights Reserved</span></p>
+            <span>All Rights Reserved</span>
+          </p>
+        </div>
+        <div class="credits">
+          Designed by
+          <a href="https://github.com/Methusela11" target="_blank"
+            ><strong style="color: black">RMEKS Softwares</strong></a
+          >
+        </div>
       </div>
-      <div class="credits">
-        Designed by <a href="https://github.com/Methusela11" target="_blank"><strong style="color: black">RMEKS Softwares</strong></a>
-      </div>
-    </div>
+    </footer>
 
-  </footer>
+    <!-- Vendor JS Files -->
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'assets/vendor/typed.js/typed.umd.js' %}"></script>
+    <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+    <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+    <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
-  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
-  <script src="{% static 'assets/vendor/typed.js/typed.umd.js' %}"></script>
-  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
-  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
-  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
-
-  <!-- Main JS File -->
-  <script src="{% static 'assets/js/main.js' %}"></script>
-
-</body>
-
+    <!-- Main JS File -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+  </body>
 </html>
