@@ -9,7 +9,6 @@
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
-
     <link
       href="{% static 'assets/img/methusela.png' %}"
       class="rmeksimg"
@@ -20,7 +19,6 @@
       class="rmeksimg"
       rel="apple-touch-icon"
     />
-
 
     <link
       href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}"
@@ -103,6 +101,11 @@
             </ul>
           </li>
           <li>
+            <a href="{% url 'prijects' %}"
+              ><i class="bi bi-envelope navicon"></i> Projects</a
+            >
+          </li>
+          <li>
             <a href="{% url 'contact' %}"
               ><i class="bi bi-envelope navicon"></i> Contact</a
             >
@@ -129,9 +132,7 @@
     </header>
 
     <main class="main">
-     
       <section id="about" class="about section">
-        
         <div
           class="container section-title"
           data-aos="fade-up"
@@ -210,7 +211,6 @@
           </div>
         </div>
       </section>
-      
     </main>
 
     <footer id="footer" class="footer position-relative light-background">
