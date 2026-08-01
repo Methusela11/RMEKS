@@ -1,287 +1,566 @@
 {% load static %}
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Engineer Methusela</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Engineer Methusela</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link
+      href="{% static 'assets/img/methusela.png' %}"
+      class="rmeksimg"
+      rel="icon"
+    />
+    <link
+      href="{% static 'assets/img/methusela.png' %}"
+      class="rmeksimg"
+      rel="apple-touch-icon"
+    />
 
-  <!-- Favicons -->
-  <link href="{% static 'assets/img/methusela.png' %}" class="rmeksimg" rel="icon">
-  <link href="{% static 'assets/img/methusela.png' %}" class="rmeksimg" rel="apple-touch-icon">
+    <!-- Vendor CSS Files -->
+    <link
+      href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}"
+      rel="stylesheet"
+    />
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet" />
+    <link
+      href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}"
+      rel="stylesheet"
+    />
 
-  <!-- Vendor CSS Files -->
-  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="{% static 'assets/css/main.css' %}" rel="stylesheet" />
+  </head>
 
-  <!-- Main CSS File -->
-  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+  <body class="index-page" style="font-family: arial, sans-serif">
+    <header id="header" class="header dark-background d-flex flex-column">
+      <i class="header-toggle d-xl-none bi bi-list"></i>
 
-
-</head>
-
-<body class="index-page"  style="font-family: arial, sans-serif;">
-
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <div class="profile-img">
-      <img src="{% static 'assets/img/methusela.png' %}" alt="" class="img-fluid rounded-circle">
-    </div>
-
-    <a href="{% url 'homepage' %}" class="logo d-flex align-items-center justify-content-center">
-      <h1 class="sitename">
-          Methusela Enoch <i class="bi bi-patch-check-fill verified-icon" style="color: #0dcaf0; font-size: 14px;"></i>
-      </h1>
-    </a>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="{% url 'homepage' %}" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="{% url 'about' %}"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="{% url 'cv' %}"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-
-          <ul>
-            <li><a href="{% url 'services' %}">Website Development</a></li>
-            <li><a href="{% url 'services' %}">Application Development</a></li>
-            <li><a href="{% url 'services' %}">Database Management</a></li>
-            <li><a href="{% url 'services' %}">System Development</a></li>
-            <li><a href="{% url 'services' %}">Cybersecurity</a></li>
-            <li><a href="{% url 'services' %}">Network Installation</a></li>
-          </ul>
-        </li>
-        <li><a href="{% url 'contact' %}"><i class="bi bi-envelope navicon"></i> Contact</a></li>
-
-      </ul>
-      <div class="social-links text-center">
-          <a href="https://x.com/EngineerEnochs" target="_blank" class="twitter"><i class="bi bi-twitter-x"></i></a>
-          <a href="https://www.facebook.com" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="https://ke.linkedin.com" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          <a href="https://ke.instagram.com" target="_blank" class="linkedin"><i class="bi bi-instagram"></i></a>
-          <a href="https://wa.me/254780667707" target="_blank" class="linkedin"><i class="bi bi-whatsapp"></i></a>
+      <div class="profile-img">
+        <img
+          src="{% static 'assets/img/methusela.png' %}"
+          alt=""
+          class="img-fluid rounded-circle"
+        />
       </div>
-    </nav>
 
-  </header>
+      <a
+        href="{% url 'homepage' %}"
+        class="logo d-flex align-items-center justify-content-center"
+      >
+        <h1 class="sitename">
+          Methusela Enoch
+          <i
+            class="bi bi-patch-check-fill verified-icon"
+            style="color: #0dcaf0; font-size: 14px"
+          ></i>
+        </h1>
+      </a>
 
-  <main class="main">
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li>
+            <a href="{% url 'homepage' %}" class="active"
+              ><i class="bi bi-house navicon"></i>Home</a
+            >
+          </li>
+          <li>
+            <a href="{% url 'about' %}"
+              ><i class="bi bi-person navicon"></i> About</a
+            >
+          </li>
+          <li>
+            <a href="{% url 'cv' %}"
+              ><i class="bi bi-file-earmark-text navicon"></i> Resume</a
+            >
+          </li>
+          <li class="dropdown">
+            <a href="#"
+              ><i class="bi bi-menu-button navicon"></i> <span>Services</span>
+              <i class="bi bi-chevron-down toggle-dropdown"></i
+            ></a>
 
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up" style="text-align: center;">
-        <h1 style="font-weight: bold;">Services</h1>
-        <p>Skills acquired can only be beneficial if used to serve the society and to provide solutions to the real world problems.
-            Some of the services I offer are highlighted below.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon flex-shrink-0"><i class="bi bi-code"></i></div>
-            <div>
-              <h4 class="title"><a  class="stretched-link">Web Development</a></h4>
-              <p class="description">A good website is one that is responsive, dynamic and easy to navigate.
-                  I develop both frontend and backend websites that are highly responsive and user-friendly.</p>
-            </div>
-          </div>
-          <!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
-            <div>
-              <h4 class="title"><a  class="stretched-link">Web Designing</a></h4>
-              <p class="description">Designing website makes a website to be more appealing and attractive as well as easing the user understanding. </p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
-            <div>
-              <h4 class="title"><a  class="stretched-link">Database Management</a></h4>
-              <p class="description">A fully stacked website must be able to store and retrieve the user's information whenever interacting with the website.
-              I create and manage the databases for all the systems and websites I build for my clients.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon flex-shrink-0"><i class="bi bi-code-slash"></i></div>
-            <div>
-              <h4 class="title"><a  class="stretched-link">System Development</a></h4>
-              <p class="description">I develop highly interactive systems that are mobile and platform independent. The System can work freely and are easy to operate regardless of individual's skills.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon flex-shrink-0"><i class="bi bi-lock"></i></div>
-            <div>
-              <h4 class="title"><a  class="stretched-link">Cybersecurity</a></h4>
-              <p class="description">Security is one of the most crucial principles to consider in the today's world.
-                  Security Vulnerabilities can cost one a fortune and therefore it is always advisable to consider it.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
-            <div class="icon flex-shrink-0"><i class="bi bi-router"></i></div>
-            <div>
-              <h4 class="title"><a class="stretched-link">Network Installation</a></h4>
-              <p class="description">In the digital age, connectivity is not a privilege; it’s a necessity for participation in education, work, and innovation.
-                  Every sector require networking to prosper in the today's world.</p>
-            </div>
-          </div><!-- End Service Item -->
-
+            <ul>
+              <li><a href="{% url 'services' %}">Website Development</a></li>
+              <li>
+                <a href="{% url 'services' %}">Application Development</a>
+              </li>
+              <li><a href="{% url 'services' %}">Database Management</a></li>
+              <li><a href="{% url 'services' %}">System Development</a></li>
+              <li><a href="{% url 'services' %}">Cybersecurity</a></li>
+              <li><a href="{% url 'services' %}">Network Installation</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="{% url 'projects' %}"
+              ><i class="bi bi-folder2-open navicon"></i> Projects</a
+            >
+          </li>
+          <li>
+            <a href="{% url 'contact' %}"
+              ><i class="bi bi-envelope navicon"></i> Contact</a
+            >
+          </li>
+        </ul>
+        <div class="social-links text-center">
+          <a href="https://x.com/EngineerEnochs" target="_blank" class="twitter"
+            ><i class="bi bi-twitter-x"></i
+          ></a>
+          <a href="https://www.facebook.com" target="_blank" class="facebook"
+            ><i class="bi bi-facebook"></i
+          ></a>
+          <a href="https://ke.linkedin.com" target="_blank" class="linkedin"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+          <a href="https://ke.instagram.com" target="_blank" class="linkedin"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a href="https://wa.me/254780667707" target="_blank" class="linkedin"
+            ><i class="bi bi-whatsapp"></i
+          ></a>
         </div>
+      </nav>
+    </header>
 
-      </div>
-
-    </section><!-- /Services Section -->
-
-        <!-- Skills Section -->
-    <section id="skills" class="skills section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up" style="text-align: center;">
-        <h1 style="font-weight: bold;">Skills</h1>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>Java</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Django</span> <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>MySQL</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
+    <main class="main">
+      <!-- Services Section -->
+      <section id="services" class="services section">
+        <!-- Section Title -->
+        <div
+          class="container section-title"
+          data-aos="fade-up"
+          style="text-align: center"
+        >
+          <h1 style="font-weight: bold">Services</h1>
+          <p>
+            Technology is most valuable when it solves real-world problems. I
+            provide innovative, secure and scalable digital solutions tailored
+            to help businesses, organizations and individuals achieve their
+            goals through modern technology.
+          </p>
         </div>
+        <!-- End Section Title -->
 
-      </div>
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-lg-4 col-md-6 service-item d-flex"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="icon flex-shrink-0"><i class="bi bi-code"></i></div>
+              <div>
+                <h4 class="title">
+                  <a class="stretched-link">Web Development</a>
+                </h4>
+                <h6>"Building fast, modern websites."</h6>
 
-    </section><!-- /Skills Section -->
+                <p class="description">
+                  I build fast, secure and responsive websites that deliver
+                  exceptional user experiences across all devices. Every website
+                  is designed to meet your business goals while ensuring
+                  reliability and scalability.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section light-background">
+            <div
+              class="col-lg-4 col-md-6 service-item d-flex"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-card-checklist"></i>
+              </div>
+              <div>
+                <h4 class="title">
+                  <a class="stretched-link">Web Designing</a>
+                </h4>
+                <h6>"First impressions begin with great design."</h6>
+                <p class="description">
+                  I create modern and visually appealing user interfaces that
+                  enhance usability, strengthen your brand identity and keep
+                  visitors engaged from the first click.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up" style="text-align: center;">
-        <h1 style="font-weight: bold;">Testimonials</h1>
-        <p>Quality of a service can only be determined from the client's feedback and not from the developer's report.</p>
-      </div><!-- End Section Title -->
+            <div
+              class="col-lg-4 col-md-6 service-item d-flex"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-card-checklist"></i>
+              </div>
+              <div>
+                <h4 class="title">
+                  <a class="stretched-link">Application Development</a>
+                </h4>
+                <h6>"Applications built for real-world impact."</h6>
+                <p class="description">
+                  I develop desktop, mobile, and web applications that automate
+                  processes, improve productivity and provide efficient
+                  solutions tailored to your business needs.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="col-lg-4 col-md-6 service-item d-flex"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-bar-chart"></i>
+              </div>
 
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 40
+              <div>
+                <h4 class="title">
+                  <a class="stretched-link">Database Management</a>
+                </h4>
+                <h6>"Organizing data with precision."</h6>
+                <p class="description">
+                  I design, optimize and maintain secure databases that ensure
+                  efficient data storage, quick retrieval and reliable
+                  performance while protecting your valuable information.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6 service-item d-flex"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="icon flex-shrink-0">
+                <i class="bi bi-code-slash"></i>
+              </div>
+              <div>
+                <h4 class="title">
+                  <a class="stretched-link">System Development</a>
+                </h4>
+                <h6>"Smart systems. Better solutions."</h6>
+                <p class="description">
+                  I develop customized software systems that streamline
+                  operations, automate workflows and improve efficiency for
+                  organizations, institutions and businesses.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6 service-item d-flex"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <div class="icon flex-shrink-0"><i class="bi bi-lock"></i></div>
+              <div>
+                <h4 class="title">
+                  <a class="stretched-link">Cybersecurity</a>
+                </h4>
+                <h6>"Security is not a feature—it's a necessity."</h6>
+                <p class="description">
+                  I implement security best practices to protect systems,
+                  applications and networks against cyber threats, ensuring
+                  confidentiality, integrity and availability of data.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6 service-item d-flex"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
+              <div class="icon flex-shrink-0"><i class="bi bi-router"></i></div>
+              <div>
+                <h4 class="title">
+                  <a class="stretched-link">Network Installation</a>
+                </h4>
+                <h6>"Connecting people, powering possibilities."</h6>
+                <p class="description">
+                  I design and deploy secure, high-performance network
+                  infrastructures that enable reliable communication, seamless
+                  connectivity and business continuity.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6 service-item d-flex"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
+              <div class="icon flex-shrink-0"><i class="bi bi-router"></i></div>
+              <div>
+                <h4 class="title">
+                  <a class="stretched-link">ICT Support</a>
+                </h4>
+                <h6>"Keeping your technology running."</h6>
+                <p class="description">
+                  I provide technical support, troubleshooting, hardware and
+                  software maintenance and IT consulting to keep your systems
+                  running efficiently with minimal downtime.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+
+            <div
+              class="col-lg-4 col-md-6 service-item d-flex"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
+              <div class="icon flex-shrink-0"><i class="bi bi-router"></i></div>
+              <div>
+                <h4 class="title">
+                  <a class="stretched-link">API Development & Integration</a>
+                </h4>
+                <h6>"Connecting systems seamlessly."</h6>
+                <p class="description">
+                  I develop secure RESTful APIs and integrate third-party
+                  services e.g payment gateways, SMS platforms, email services,
+                  authentication providers and to enable smooth communication
+                  between systems.
+                </p>
+              </div>
+            </div>
+            <!-- End Service Item -->
+          </div>
+        </div>
+      </section>
+      <!-- /Services Section -->
+
+      <!-- Skills Section -->
+      <section id="skills" class="skills section light-background">
+        <!-- Section Title -->
+        <div
+          class="container section-title"
+          data-aos="fade-up"
+          style="text-align: center"
+        >
+          <h1 style="font-weight: bold">Skills</h1>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row skills-content skills-animation">
+            <div class="col-lg-6">
+              <div class="progress">
+                <span class="skill"
+                  ><span>HTML</span> <i class="val">100%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="100"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>CSS</span> <i class="val">90%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>JavaScript</span> <i class="val">75%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+            </div>
+
+            <div class="col-lg-6">
+              <div class="progress">
+                <span class="skill"
+                  ><span>Java</span> <i class="val">80%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>Django</span> <i class="val">95%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="95"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>MySQL</span> <i class="val">80%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <!-- End Skills Item -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Skills Section -->
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials section light-background">
+        <!-- Section Title -->
+        <div
+          class="container section-title"
+          data-aos="fade-up"
+          style="text-align: center"
+        >
+          <h1 style="font-weight: bold">Testimonials</h1>
+          <p>
+            Quality of a service can only be determined from the client's
+            feedback and not from the developer's report.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
                 },
-                "1200": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 1
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                },
+                "breakpoints": {
+                  "320": {
+                    "slidesPerView": 1,
+                    "spaceBetween": 40
+                  },
+                  "1200": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 1
+                  }
                 }
               }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Methusela Enoch is a highly skilled young tech enthusiast with more than enough potential to take our nations technology to the next level.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src=" " class="testimonial-img" alt="">
-                <h3>Emma Tatu</h3>
-                <h4>ICT Officer, County Govenment of Kilifi <br>Department of Water, Environment, Forestry, Natural Resources & Solid Waste Management</h4>
+            </script>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span
+                      >Methusela Enoch is a highly skilled young tech enthusiast
+                      with more than enough potential to take our nations
+                      technology to the next level.</span
+                    >
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                  <img src=" " class="testimonial-img" alt="" />
+                  <h3>Emma Tatu</h3>
+                  <h4>
+                    ICT Officer, County Govenment of Kilifi <br />Department of
+                    Water, Environment, Forestry, Natural Resources & Solid
+                    Waste Management
+                  </h4>
+                </div>
               </div>
-            </div><!-- End testimonial item -->
+              <!-- End testimonial item -->
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Methusela  is a man to watch. He has the capability of transforming nothing to something great.
-                      I love the way he makes his designs to be so unique and original.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="{% static 'assets/img/methusela.png' %}" class="testimonial-img" alt="">
-                <h3>Md Hope</h3>
-                <h4>ICT Officer, County Govenment of Kilifi <br>Department of Trade</h4>
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span
+                      >Methusela is a man to watch. He has the capability of
+                      transforming nothing to something great. I love the way he
+                      makes his designs to be so unique and original.</span
+                    >
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                  <img
+                    src="{% static 'assets/img/methusela.png' %}"
+                    class="testimonial-img"
+                    alt=""
+                  />
+                  <h3>Md Hope</h3>
+                  <h4>
+                    ICT Officer, County Govenment of Kilifi <br />Department of
+                    Trade
+                  </h4>
+                </div>
               </div>
-            </div><!-- End testimonial item -->
+              <!-- End testimonial item -->
 
-            <!-- <div class="swiper-slide">
+              <!-- <div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
@@ -294,7 +573,7 @@
               </div>
             </div>End testimonial item -->
 
-            <!-- <div class="swiper-slide">
+              <!-- <div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
@@ -306,50 +585,50 @@
                 <h4>Freelancer</h4>
               </div>
             </div>End testimonial item -->
-
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
+      </section>
+      <!-- /Testimonials Section -->
+    </main>
 
-      </div>
-
-    </section><!-- /Testimonials Section -->
-
-  </main>
-
-  <footer id="footer" class="footer position-relative light-background">
-
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>©
+    <footer id="footer" class="footer position-relative light-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            ©
             <span>Copyright</span>
             <strong class="px-1 sitename">
-                <a href="https://portifolio-v4h3.onrender.com" target="_blank"><strong style="color: black">Methusela Enoch</strong></a>
+              <a href="https://portifolio-v4h3.onrender.com" target="_blank"
+                ><strong style="color: black">Methusela Enoch</strong></a
+              >
             </strong>
-            <span>All Rights Reserved</span></p>
+            <span>All Rights Reserved</span>
+          </p>
+        </div>
+        <div class="credits">
+          Designed by
+          <a href="https://github.com/Methusela11" target="_blank"
+            ><strong style="color: black">RMEKS Softwares</strong></a
+          >
+        </div>
       </div>
-      <div class="credits">
-        Designed by <a href="https://github.com/Methusela11" target="_blank"><strong style="color: black">RMEKS Softwares</strong></a>
-      </div>
-    </div>
+    </footer>
 
-  </footer>
+    <!-- Vendor JS Files -->
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'assets/vendor/typed.js/typed.umd.js' %}"></script>
+    <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+    <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+    <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
-  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
-  <script src="{% static 'assets/vendor/typed.js/typed.umd.js' %}"></script>
-  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
-  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
-  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
-
-  <!-- Main JS File -->
-  <script src="{% static 'assets/js/main.js' %}"></script>
-
-</body>
-
+    <!-- Main JS File -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+  </body>
 </html>

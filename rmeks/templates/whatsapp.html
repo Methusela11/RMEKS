@@ -2,72 +2,85 @@
 
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{% static 'assets/css/whatsapp.css' %}">
-</head>
-<body>
-<main class="whatsapp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="{% static 'assets/css/whatsapp.css' %}" />
+  </head>
+  <body>
+    <main class="whatsapp">
+      <!-- WHATSAPP FLOATING ICON -->
+      <div class="kc-whatsapp-icon" id="whatsappToggle">
+        <img
+          id="whatsappIcon"
+          src="{% static 'assets/img/icons/whatsapp-t.png' %}"
+          alt="WhatsApp"
+        />
+      </div>
 
-<!-- WHATSAPP FLOATING ICON -->
-<div class="kc-whatsapp-icon" id="whatsappToggle">
-    <img id="whatsappIcon" src="{% static 'assets/img/icons/whatsapp-t.png' %}" alt="WhatsApp">
-</div>
-
-<!-- WHATSAPP SUPPORT BOX -->
-<div class="kc-whatsapp-box" id="whatsappBox">
-
-    <!-- HEADER -->
-    <div class="kc-whatsapp-top">
-        <div class="kc-whatsapp-top-row">
-            <img src="{% static 'assets/img/methusela.png' %}" alt="" style="border-radius: 50%">
+      <!-- WHATSAPP SUPPORT BOX -->
+      <div class="kc-whatsapp-box" id="whatsappBox">
+        <!-- HEADER -->
+        <div class="kc-whatsapp-top">
+          <div class="kc-whatsapp-top-row">
+            <img
+              src="{% static 'assets/img/methusela.png' %}"
+              alt=""
+              style="border-radius: 50%"
+            />
             <h4><strong>Start a Conversation</strong></h4>
+          </div>
+          <p>Get in touch? Chat with us...</p>
         </div>
-        <p>Get in touch? Chat with us...</p>
-    </div>
 
-    <!-- BODY -->
-    <div class="kc-whatsapp-content">
-        <small class="kc-reply-time">The team typically replies in a few minutes.</small>
+        <!-- BODY -->
+        <div class="kc-whatsapp-content">
+          <small class="kc-reply-time"
+            >The team typically replies in a few minutes.</small
+          >
 
-        <a href="https://wa.me/254780667707" target="_blank" class="kc-agent-card">
-            <img src="{% static 'assets/img/methusela.png' %}" alt="">
+          <a
+            href="https://wa.me/254110440006"
+            target="_blank"
+            class="kc-agent-card"
+          >
+            <img src="{% static 'assets/img/methusela.png' %}" alt="" />
             <div>
-                <strong>Rmeks Software Support</strong>
-                <span class="support">Hi! Click to chat on WhatsApp</span>
+              <strong>Rmeks Software Support</strong>
+              <span class="support">Hi! Click to chat on WhatsApp</span>
             </div>
-        </a>
-    </div>
+          </a>
+        </div>
+      </div>
 
-</div>
+      <script>
+        (function () {
+          const toggle = document.getElementById("whatsappToggle");
+          const box = document.getElementById("whatsappBox");
+          const icon = document.getElementById("whatsappIcon");
 
-<script>
-(function () {
-    const toggle = document.getElementById("whatsappToggle");
-    const box = document.getElementById("whatsappBox");
-    const icon = document.getElementById("whatsappIcon");
+          const whatsappImg = "{% static 'assets/img/icons/whatsapp-t.png' %}";
+          const closeImg = "{% static 'assets/img/icons/close-t.png' %}";
 
-    const whatsappImg = "{% static 'assets/img/icons/whatsapp-t.png' %}";
-    const closeImg = "{% static 'assets/img/icons/close-t.png' %}";
+          let isOpen = false;
 
-    let isOpen = false;
+          toggle.addEventListener("click", () => {
+            isOpen = !isOpen;
 
-    toggle.addEventListener("click", () => {
-        isOpen = !isOpen;
-
-        if (isOpen) {
-            box.style.display = "block";
-            icon.src = closeImg;
-        } else {
-            box.style.display = "none";
-            icon.src = whatsappImg;
-        }
-    });
-})();
-</script>
-
-</main>
-</body>
+            if (isOpen) {
+              box.style.display = "block";
+              icon.src = closeImg;
+            } else {
+              box.style.display = "none";
+              icon.src = whatsappImg;
+            }
+          });
+        })();
+      </script>
+    </main>
+  </body>
 </html>
