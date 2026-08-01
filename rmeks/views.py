@@ -4,6 +4,7 @@ from django.shortcuts import render,redirect
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 
+from rmeks.models import Project
 from methusela import settings
 from rmeks.models import ContactMessage
 
@@ -20,8 +21,13 @@ def services(request):
 def about(request):
     return render(request,'about.html')
 
+
 def projects(request):
-    return render(request,'projects.html')
+    projects = Project.objects.all().order_by("-id")
+
+    return render(request, "projects.html", {
+        "projects": projects
+    })
 
 
 def contact(request):
