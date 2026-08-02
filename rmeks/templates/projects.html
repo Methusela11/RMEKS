@@ -143,10 +143,9 @@
       <section class="py-5">
         <div class="container">
           <div class="text-center mb-5">
-            <h1 style="font-weight: bold">My Projects</h1>
-            <p><ul>
-                <li><i class="bi bi-code-slash navicon"></i> Projects</li>
-            </ul></p>
+            <h1 style="font-weight: bold">
+              <i class="bi bi-code-slash navicon"></i> My Projects
+            </h1>
           </div>
 
           <div class="row">
@@ -185,10 +184,8 @@
             <div class="col-12 text-center">
               <h4>
                 No projects uploaded yet.
-                        <a href="{% url 'projects' %}">Refresh</a>
-                    
-                
-            </h4>
+                <a href="{% url 'projects' %}">Refresh</a>
+              </h4>
             </div>
 
             {% endfor %}
