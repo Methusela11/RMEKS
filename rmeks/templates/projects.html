@@ -143,44 +143,96 @@
             </h1>
           </div>
 
-          <div class="row">
+          <div class="row g-4 projects-grid">
             {% for project in projects %}
 
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card shadow h-100">
-                <img
-                  src="{{ project.image.url }}"
-                  class="card-img-top"
-                  style="height: 220px; object-fit: cover"
-                />
-
-                <div class="card-body d-flex flex-column">
-                  <h4>{{ project.title }}</h4>
-
-                  <p class="text-muted">
-                    {{ project.description|truncatewords:30 }}
-                  </p>
-
-                  {% if project.link %}
-                  <a
-                    href="{{ project.link }}"
-                    target="_blank"
-                    class="btn btn-primary mt-auto"
-                  >
-                    View Project
-                  </a>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="project-card h-100">
+                <!-- Project Image -->
+                <div class="project-image-wrapper">
+                  {% if project.image %}
+                  <img
+                    src="{{ project.image.url }}"
+                    alt="{{ project.title }}"
+                    class="project-image"
+                  />
+                  {% else %}
+                  <div class="project-image-placeholder">
+                    <i class="bi bi-code-slash"></i>
+                  </div>
                   {% endif %}
+                </div>
+
+                <!-- Project Content -->
+                <div class="project-content">
+                  <!-- Title -->
+                  <h3 class="project-title">{{ project.title }}</h3>
+
+                  <!-- Description -->
+                  <div class="project-description">
+                    <p>{{ project.description|truncatewords:25 }}</p>
+
+                    {% if project.description|wordcount > 25 %}
+                    <a
+                      href="{{ project.link|default:'#' }}"
+                      target="_blank"
+                      class="read-more"
+                    >
+                      Read More <i class="bi bi-arrow-right"></i>
+                    </a>
+                    {% endif %}
+                  </div>
+
+                  <!-- Project Stack -->
+                  {% if project.stack %}
+                  <div class="project-stack-section">
+                    <h6 class="stack-title">
+                      <i class="bi bi-layers"></i>
+                      Project Stack
+                    </h6>
+
+                    <div class="project-stack">
+                      {% for technology in project.stack %}
+                      <span class="stack-badge"> {{ technology }} </span>
+                      {% endfor %}
+                    </div>
+                  </div>
+                  {% endif %}
+
+                  <!-- Project URLs -->
+                  <div class="project-links">
+                    {% if project.github_url %}
+                    <a
+                      href="{{ project.github_url }}"
+                      target="_blank"
+                      class="project-btn github-btn"
+                    >
+                      <i class="bi bi-github"></i>
+                      GitHub
+                    </a>
+                    {% endif %} {% if project.link %}
+                    <a
+                      href="{{ project.link }}"
+                      target="_blank"
+                      class="project-btn live-btn"
+                    >
+                      <i class="bi bi-globe"></i>
+                      Live
+                    </a>
+                    {% endif %}
+                  </div>
                 </div>
               </div>
             </div>
 
             {% empty %}
 
-            <div class="col-12 text-center">
-              <h4>
-                No projects uploaded yet.
+            <div class="col-12">
+              <div class="empty-projects text-center">
+                <i class="bi bi-folder-x"></i>
+                <h4>No projects uploaded yet.</h4>
                 <a href="{% url 'projects' %}">Refresh</a>
-              </h4>
+              </div>
             </div>
 
             {% endfor %}
